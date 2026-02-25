@@ -1,0 +1,30 @@
+.container .main,
+.container .main .table-row .thead,
+.container .main .table-row .tdata {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.container .main {
+    width: auto;
+    margin: 30px;
+}
+
+.container .main .table-row .thead,
+.container .main .table-row .tdata {
+    padding: 15px;
+}
+
+.container .main .table-row .thead {
+    background-color: bisque;
+    height: 70px;
+}
+
+.container .main .table-row .tdata {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.container {
+    overflow-x: auto;
+}

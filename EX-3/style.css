@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', sans-serif;
+}
+
+
+/* Grid Container  */
+.grid-container {
+    margin: 15px;
+}
+
+
+/* First Row */
+
+.grid-container .row-one {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.grid-container .row-one .hero-section-img-container {
+    /* grid-column: 1fr; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* margin-bottom: 0px; */
+}
+
+.grid-container .row-one .hero-section-img-container .hero-section-image {
+    width: 600px;
+    height: 100%;
+    border-color: bisque;
+    border-radius: 10px;
+}
+
+.grid-container .row-one .hero-section-content {
+    grid-column: col-start 2 / span 2;
+}
+
+
+/* Second Row */
+
+.grid-container .row-two {
+    margin: 25px auto;
+}
+
+
+
+/* Third Row */
+
+.grid-container .row-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.grid-container .row-three .card {
+    grid-column: 1fr;
+}
+
+.grid-container .row-three .card-image {
+    width: 100%;
+    height: 200px;
+}
+
+.card .card-btn {
+    float: right;
+    margin: 20px;
+}
+
+
+/* common CSS  */
+
+.grid-container .card,
+.hero-section-content {
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.section-heading {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 15px;
+}
+
+.section-para {
+    padding: 20px;
+}
+
+.card-btn,
+.row-two-btn {
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: green;
+    color: whitesmoke;
+}
+
+.hero-section-content,
+.card {
+    background-color: bisque;
+}
+
+
+
+/* Responsiveness - Media Queries */
+
+/* For Tablet , from 600px to 1200px. */
+
+@media only screen and (max-width: 1200px) and (min-width: 600px) {
+
+    /* First Row */
+
+    .grid-container {
+        margin: 15px;
+    }
+
+    .grid-container .row-one {
+        display: flex;
+        flex-direction: column;
+        /* gap: inherit; */
+        gap: 15px;
+    }
+
+    .grid-container .row-one .hero-section-img-container {
+        /* grid-column: col-start / span 1; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .grid-container .row-one .hero-section-content {
+        /* grid-column: col-start 3 / span 1; */
+        height: fit-content;
+        /* margin-left: 10px; */
+    }
+
+    .grid-container .row-one .hero-section-img-container .hero-section-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* padding-bottom: 10px; */
+    }
+
+
+    /* Second Row */
+
+    .grid-container .row-two {
+        display: flex;
+        margin: 10px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .grid-container .row-two .row-two-btn {
+        width: auto;
+        height: auto;
+    }
+
+    .grid-container .row-two .click_text {
+        padding: 20px;
+    }
+
+
+    /* Third Row */
+
+    .grid-container .row-three {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr; */
+        gap: 20px;
+    }
+
+
+    .grid-container .row-three .card {
+        grid-column: span 1;
+    }
+
+}
+
+
+/* For Mobile Devices, from 600px to 0px */
+
+@media only screen and (max-width: 600px) {
+
+    /* First Row */
+
+    .grid-container .row-one {
+        grid-template-rows: 1fr;
+        gap: 0;
+        /* margin: 25px; */
+    }
+
+    .grid-container .row-one .hero-section-img-container {
+        grid-column: col-start / span 4;
+    }
+
+    .grid-container .row-one .hero-section-content {
+        grid-column: col-start / span 4;
+        margin-top: 15px;
+    }
+
+    .grid-container .row-one .hero-section-img-container .hero-section-image {
+        width: 100%;
+        justify-content: center;
+        /* margin-bottom: 20px; */
+    }
+
+    .grid-container .row-one .hero-section-img-container {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Second Row */
+
+    .grid-container .row-two {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid-container .row-two .row-two-btn {
+        margin: 0 auto;
+        padding: 20px;
+        width: 130px;
+        height: auto;
+    }
+
+    .grid-container .row-two .click_text {
+        margin: 0 auto;
+        padding: 5px;
+        width: 100%;
+        text-align: justify;
+    }
+
+    /* Third Row */
+
+    .grid-container .row-three {
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+    }
+
+    .row-three .card {
+        width: 100%;
+    }
+
+}
